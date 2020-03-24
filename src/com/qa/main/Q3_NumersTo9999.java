@@ -12,7 +12,7 @@ public class Q3_NumersTo9999 {
 	}
 	String nameThatNumber (int Num1) {
 		final String[] EinerstelleName = {
-	            "zero", "one", "two", "three", "four", "five", "six", "seven",
+	            "", "one", "two", "three", "four", "five", "six", "seven",
 	            "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
 	            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
 	    };

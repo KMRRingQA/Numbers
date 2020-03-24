@@ -23,7 +23,7 @@ public class Runner {
 		System.out.println(Numbers3.nameThatNumber(5248));
 		System.out.println(Numbers3.nameThatNumber(17));
 		System.out.println(Numbers3.nameThatNumber(8984));
-		System.out.println(Numbers3.nameThatNumber(7777));
+		System.out.println(Numbers3.nameThatNumber(7077));
 		System.out.println(Numbers3.nameThatNumber(10000));
 		
 	}
