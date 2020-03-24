@@ -14,7 +14,7 @@ public class Q2_NumbersTo999 {
 	            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
 	    };
 		final String[] ZehnerstelleName = {
-				"", "", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
+				"", "one", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
 		};
 		if (Num1<20) {
 			return EinerstelleName[Num1];
@@ -23,20 +23,48 @@ public class Q2_NumbersTo999 {
 			System.out.println("You're supposed to enter a number n where 0<n<1000.");
 			return null;
 		}
-		else if (Num1<99) {
-			int Zehnerstelle = Num1/10;
-			int Einerstelle = Num1%10;
-			String FullName;
-			FullName = ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
-			return FullName;
+		else if (Num1<100) {
+			if (Num1%10==0) {
+				int Zehnerstelle = Num1/10;
+				String FullName;
+				FullName = ZehnerstelleName[Zehnerstelle];
+				return FullName;
+			}
+			else {
+				int Zehnerstelle = Num1/10;
+				int Einerstelle = Num1%10;
+				String FullName;
+				FullName = ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+				return FullName;
+			}
 		}
 		else {
 			int Hunderterstelle = Num1/100;
-			int Zehnerstelle = (Num1/10)%10;
-			int Einerstelle = Num1%10;
-			String FullName;
-			FullName = EinerstelleName[Hunderterstelle] + " hundred "+ ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
-			return FullName;
+			if (Num1%100==0) {
+				String FullName;
+				FullName = EinerstelleName[Hunderterstelle] + " hundred ";
+				return FullName;
+			}
+			if (Num1%100<20) {
+				int Einerstelle = Num1%100;
+				String FullName;
+				FullName = EinerstelleName[Hunderterstelle] + " hundred and " + EinerstelleName[Einerstelle];
+				return FullName;
+			}
+			if (Num1%10==0) {
+				int Zehnerstelle = (Num1/10)%10;
+				int Einerstelle = Num1%10;
+				String FullName;
+				FullName = EinerstelleName[Hunderterstelle] + " hundred and " + ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
+				return FullName;
+			}
+			else {
+				int Zehnerstelle = (Num1/10)%10;
+				int Einerstelle = Num1%10;
+				String FullName;
+				FullName = EinerstelleName[Hunderterstelle] + " hundred and " + ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+				return FullName;
+			}
 		}
 	}
 }
