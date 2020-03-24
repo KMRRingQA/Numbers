@@ -30,7 +30,7 @@ public class Q3_NumersTo9999 {
 			int Zehnerstelle = Num1/10;
 			int Einerstelle = Num1%10;
 			String FullName;
-			FullName = ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+			FullName = ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
 			return FullName;
 		}
 		else if (Num1<999){
@@ -38,7 +38,7 @@ public class Q3_NumersTo9999 {
 			int Zehnerstelle = (Num1/10)%10;
 			int Einerstelle = Num1%10;
 			String FullName;
-			FullName = EinerstelleName[Hunderterstelle] + " hundred and "+ ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+			FullName = EinerstelleName[Hunderterstelle] + " hundred "+ ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
 			return FullName;
 		}
 		else {
@@ -47,7 +47,7 @@ public class Q3_NumersTo9999 {
 			int Zehnerstelle = (Num1/10)%10;
 			int Einerstelle = Num1%10;
 			String FullName;
-			FullName = EinerstelleName[Tausenderstelle] + "-thousand, " + EinerstelleName[Hunderterstelle] + " hundred and "+ ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+			FullName = EinerstelleName[Tausenderstelle] + " thousand, " + EinerstelleName[Hunderterstelle] + " hundred "+ ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
 			return FullName;
 		}
 	}

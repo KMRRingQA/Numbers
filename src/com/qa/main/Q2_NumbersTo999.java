@@ -27,7 +27,7 @@ public class Q2_NumbersTo999 {
 			int Zehnerstelle = Num1/10;
 			int Einerstelle = Num1%10;
 			String FullName;
-			FullName = ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+			FullName = ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
 			return FullName;
 		}
 		else {
@@ -35,7 +35,7 @@ public class Q2_NumbersTo999 {
 			int Zehnerstelle = (Num1/10)%10;
 			int Einerstelle = Num1%10;
 			String FullName;
-			FullName = EinerstelleName[Hunderterstelle] + " hundred and "+ ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+			FullName = EinerstelleName[Hunderterstelle] + " hundred "+ ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
 			return FullName;
 		}
 	}

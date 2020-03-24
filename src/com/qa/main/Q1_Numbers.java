@@ -27,7 +27,7 @@ public class Q1_Numbers {
 			int Zehnerstelle = Num1/10;
 			int Einerstelle = Num1%10;
 			String FullName;
-			FullName = ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
+			FullName = ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
 			return FullName;
 		}
 	}
