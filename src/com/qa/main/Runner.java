@@ -21,8 +21,9 @@ public class Runner {
 		System.out.println("\n"); //now up to 9999, some examples:
 		Q3_NumersTo9999 Numbers3 = new Q3_NumersTo9999();
 		System.out.println(Numbers3.nameThatNumber(1000));
+		System.out.println(Numbers3.nameThatNumber(7016));
 		System.out.println(Numbers3.nameThatNumber(17));
-		System.out.println(Numbers3.nameThatNumber(8588));
+		System.out.println(Numbers3.nameThatNumber(8585));
 		System.out.println(Numbers3.nameThatNumber(7770));
 		System.out.println(Numbers3.nameThatNumber(7700));
 		System.out.println(Numbers3.nameThatNumber(10000));
