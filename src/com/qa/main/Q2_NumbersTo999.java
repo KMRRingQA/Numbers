@@ -2,68 +2,60 @@ package com.qa.main;
 
 public class Q2_NumbersTo999 {
 	void crossSum(int Num1) {
-		int Einerstelle = Num1%10;
-		int Zehnerstelle = Num1/10;
-		int Quersumme = Einerstelle + Zehnerstelle;
-		System.out.println(Zehnerstelle + " + " + Einerstelle + " = " + Quersumme);
+		int unit = Num1 % 10;
+		int tens = Num1 / 10;
+		int crossSum = unit + tens;
+		System.out.println(tens + " + " + unit + " = " + crossSum);
 	}
-	String nameThatNumber (int Num1) {
-		final String[] EinerstelleName = {
-	            "", "one", "two", "three", "four", "five", "six", "seven",
-	            "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
-	            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
-	    };
-		final String[] ZehnerstelleName = {
-				"", "one", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"
-		};
-		if (Num1<20) {
-			return EinerstelleName[Num1];
-		}
-		else if (Num1>999) {
+
+	String nameThatNumber(int Num1) {
+		final String[] unitsName = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+				"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+		final String[] tensName = { "", "one", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty",
+				"ninety" };
+		if (Num1 < 20) {
+			return unitsName[Num1];
+		} else if (Num1 > 999) {
 			System.out.println("You're supposed to enter a number n where 0<n<1000.");
 			return null;
-		}
-		else if (Num1<100) {
-			if (Num1%10==0) {
-				int Zehnerstelle = Num1/10;
-				String FullName;
-				FullName = ZehnerstelleName[Zehnerstelle];
-				return FullName;
+		} else if (Num1 < 100) {
+			if (Num1 % 10 == 0) {
+				int tens = Num1 / 10;
+				String fullName;
+				fullName = tensName[tens];
+				return fullName;
+			} else {
+				int tens = Num1 / 10;
+				int units = Num1 % 10;
+				String fullName;
+				fullName = tensName[tens] + "-" + unitsName[units];
+				return fullName;
 			}
-			else {
-				int Zehnerstelle = Num1/10;
-				int Einerstelle = Num1%10;
-				String FullName;
-				FullName = ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
-				return FullName;
+		} else {
+			int hundreds = Num1 / 100;
+			if (Num1 % 100 == 0) {
+				String fullName;
+				fullName = unitsName[hundreds] + " hundred ";
+				return fullName;
 			}
-		}
-		else {
-			int Hunderterstelle = Num1/100;
-			if (Num1%100==0) {
-				String FullName;
-				FullName = EinerstelleName[Hunderterstelle] + " hundred ";
-				return FullName;
+			if (Num1 % 100 < 20) {
+				int units = Num1 % 100;
+				String fullName;
+				fullName = unitsName[hundreds] + " hundred and " + unitsName[units];
+				return fullName;
 			}
-			if (Num1%100<20) {
-				int Einerstelle = Num1%100;
-				String FullName;
-				FullName = EinerstelleName[Hunderterstelle] + " hundred and " + EinerstelleName[Einerstelle];
-				return FullName;
-			}
-			if (Num1%10==0) {
-				int Zehnerstelle = (Num1/10)%10;
-				int Einerstelle = Num1%10;
-				String FullName;
-				FullName = EinerstelleName[Hunderterstelle] + " hundred and " + ZehnerstelleName[Zehnerstelle] + " " + EinerstelleName[Einerstelle];
-				return FullName;
-			}
-			else {
-				int Zehnerstelle = (Num1/10)%10;
-				int Einerstelle = Num1%10;
-				String FullName;
-				FullName = EinerstelleName[Hunderterstelle] + " hundred and " + ZehnerstelleName[Zehnerstelle] + "-" + EinerstelleName[Einerstelle];
-				return FullName;
+			if (Num1 % 10 == 0) {
+				int tens = (Num1 / 10) % 10;
+				int units = Num1 % 10;
+				String fullName;
+				fullName = unitsName[hundreds] + " hundred and " + tensName[tens] + " " + unitsName[units];
+				return fullName;
+			} else {
+				int tens = (Num1 / 10) % 10;
+				int units = Num1 % 10;
+				String fullName;
+				fullName = unitsName[hundreds] + " hundred and " + tensName[tens] + "-" + unitsName[units];
+				return fullName;
 			}
 		}
 	}
