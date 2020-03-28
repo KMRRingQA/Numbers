@@ -21,11 +21,18 @@ public class Runner {
 //		System.out.println(Numbers3.nameThatNumber(1000));
 //		System.out.println(Numbers3.nameThatNumber(5678));
 
-		ExtraNumbersTo2147483647 extraNumbers = new ExtraNumbersTo2147483647();
-		long Num = 2147425254342583643L;
-		int length = (extraNumbers.howLong(Num));
-		int[] Split = extraNumbers.splitIntoArray(Num, length);
-		extraNumbers.nameThatNumber(Split, length);
+//		ExtraNumbersTo2147483647 extraNumbers = new ExtraNumbersTo2147483647();
+//		long Num = 2147425254342583643L;
+//		int length = (extraNumbers.howLong(Num));
+//		int[] Split = extraNumbers.splitIntoArray(Num, length);
+//		extraNumbers.nameThatNumber(Split, length);
+
+		System.out.println(
+				"up to 101 digits. There is no english name given to most numbers above the magnitude 99E101.");
+
+		ChunkCounter chunkCounter = new ChunkCounter();
+		String numString = "110225523454322423423446242424323425234523452345244694743123413412341234615363614352423874223400024410";
+		chunkCounter.chunker(numString);
 
 	}
 
